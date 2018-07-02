@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import umn.mobile.model.MasterItem;
 import umn.mobile.service.MasterItemService;
 
@@ -26,8 +25,7 @@ public class MasterItemController {
     //ShowMasterItemById
     @GetMapping(value = "/{id}", produces = {"application/json"})
     public MasterItem showMasterItemById(@PathVariable("id") Long item_id){
-        MasterItem masterItemById = masterItemService.getMasterItemById(item_id);
-        return masterItemById;
+        return masterItemService.getMasterItemById(item_id);
     }
 
     //CreateNewMasterItem

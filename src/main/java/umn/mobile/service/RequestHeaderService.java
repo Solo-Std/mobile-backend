@@ -7,7 +7,6 @@ import umn.mobile.model.RequestHeader;
 import umn.mobile.repository.RequestDetailRepo;
 import umn.mobile.repository.RequestHeaderRepo;
 
-import java.sql.Date;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
@@ -55,7 +54,6 @@ public class RequestHeaderService {
             ex.printStackTrace();
             return "Save Failed!" + ex.getMessage();
         }
-
         return "Save Success!";
     }
 
@@ -64,8 +62,7 @@ public class RequestHeaderService {
     }
 
     public List<RequestHeader> getAllRequestHeader(){
-        List listOfRequestHeader = requestHeaderRepo.findAll();
-        return listOfRequestHeader;
+        return requestHeaderRepo.findAll();
     }
 
     public void deleteRequestHeader(Long request_header_id) {

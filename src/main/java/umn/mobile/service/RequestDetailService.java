@@ -24,8 +24,7 @@ public class RequestDetailService {
     }
 
     public List<RequestDetail> getAllRequestDetail(){
-        List listOfRequestDetail = requestDetailRepo.findAll();
-        return listOfRequestDetail;
+        return requestDetailRepo.findAll();
     }
 
     public void deleteRequestDetail(Long request_detail_id) {
@@ -33,7 +32,6 @@ public class RequestDetailService {
     }
 
     public Set<RequestDetail> getRequestDetailByRequestHeader(Long request_header_id){
-        Set<RequestDetail> listOfRequestDetail = requestDetailRepo.listOfRequestDetail(request_header_id);
-        return listOfRequestDetail;
+        return requestDetailRepo.listOfRequestDetail(request_header_id);
     }
 }

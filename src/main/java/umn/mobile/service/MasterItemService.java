@@ -23,8 +23,7 @@ public class MasterItemService {
     }
 
     public List<MasterItem> getAllMasterItem(){
-        List listOfMasterItem = masterItemRepo.findAll();
-        return listOfMasterItem;
+        return masterItemRepo.findAll();
     }
 
     public void deleteMasterItem(Long item_id) {

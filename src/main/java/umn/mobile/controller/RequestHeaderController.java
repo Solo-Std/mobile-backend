@@ -1,12 +1,10 @@
 package umn.mobile.controller;
 
-import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import umn.mobile.model.Request;
-import umn.mobile.model.RequestDetail;
 import umn.mobile.model.RequestHeader;
 import umn.mobile.service.RequestHeaderService;
 
@@ -29,8 +27,7 @@ public class RequestHeaderController {
     //ShowRequestHeaderById
     @GetMapping(value = "/{id}", produces = {"application/json"})
     public RequestHeader showRequestHeaderById(@PathVariable("id") Long request_header_id){
-        RequestHeader requestHeaderById = requestHeaderService.getRequestHeaderById(request_header_id);
-        return requestHeaderById;
+        return requestHeaderService.getRequestHeaderById(request_header_id);
     }
 
     //CreateNewRequestHeader

@@ -26,15 +26,13 @@ public class RequestDetailController {
     //ShowRequestDetailById
     @GetMapping(value = "/{id}", produces = {"application/json"})
     public RequestDetail showRequestDetailById(@PathVariable("id") Long request_detail_id){
-        RequestDetail requestDetailById = requestDetailService.getRequestDetailById(request_detail_id);
-        return requestDetailById;
+        return requestDetailService.getRequestDetailById(request_detail_id);
     }
 
     //ShowRequestDetailByRequestHeader
     @GetMapping(value = "rh/{id}", produces = {"application/json"})
     public Set<RequestDetail> showRequestDetailByRequestHeader(@PathVariable("id") Long request_header_id){
-        Set<RequestDetail> requestDetailByRequestHeader = requestDetailService.getRequestDetailByRequestHeader(request_header_id);
-        return requestDetailByRequestHeader;
+        return requestDetailService.getRequestDetailByRequestHeader(request_header_id);
     }
 
     //CreateNewRequestDetail
